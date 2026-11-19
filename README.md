@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FingSprint
+
+**FingSprint** is a lightweight, distraction-free typing speed test designed to measure your Words Per Minute (WPM), accuracy, and typing consistency directly in the browser.
+
+## Features
+
+- **Real-Time WPM & Accuracy Tracking**: Instant feedback on typing speed, errors, and live character accuracy via `StatsCard`.
+- **Target Benchmarks**: Compare your performance against standard typing benchmarks with `IdealWPMCard`.
+- **Local Test History**: Automatically saves your past typing sessions locally in the browser (`HistoryCard`) with zero backend or account required.
+- **Dark & Light Mode**: Seamless theme switching powered by `theme-provider`.
+- **100% Static & Edge-Ready**: Exported as static HTML/CSS/JS (`out/`) for instant global CDN delivery.
+
+## Project Structure
+
+```text
+fingsprint/
+├── app/
+│   ├── globals.css          # Global styles and Tailwind setup
+│   ├── layout.tsx           # Root layout and theme provider
+│   └── page.tsx             # Main typing test arena
+├── components/
+│   ├── ui/                  # Reusable UI primitives
+│   ├── Hero.tsx             # Header and test prompt area
+│   ├── StatsCard.tsx        # Live WPM & accuracy metrics
+│   ├── IdealWPMCard.tsx     # Speed benchmark comparison
+│   ├── InstructionsCard.tsx # Quick typing test rules & tips
+│   ├── HistoryCard.tsx      # Local session history log
+│   ├── Navbar.tsx           # Top navigation bar
+│   └── Footer.tsx           # Footer credits
+├── lib/                     # Helper utilities & word lists
+├── public/                  # Static assets
+└── next.config.ts           # Static export configuration
+
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+* Node.js 20+
+* npm, pnpm, or yarn
+
+### Installation & Local Development
+
+1. **Clone the repository:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [https://github.com/your-username/fingsprint.git](https://github.com/your-username/fingsprint.git)
+cd fingsprint
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install dependencies:**
+```bash
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+3. **Start the development server:**
+```bash
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Open `http://localhost:3000` in your browser to start typing.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Building & Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+FingSprint is configured for static export (`output: "export"` in `next.config.ts`), generating a standalone `out/` directory.
+
+```bash
+# Build static output
+npm run build
+
+# Deploy directly to Cloudflare Pages production
+npx wrangler pages deploy out --project-name=fingsprint --branch=main
+
+```
+
+## Tech Stack
+
+* **Framework**: Next.js (App Router + Static Export)
+* **Styling**: Tailwind CSS
+* **Language**: TypeScript
