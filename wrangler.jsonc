@@ -2,6 +2,9 @@
   "name": "fingsprint",
   "compatibility_date": "2026-11-19",
   "assets": {
-    "directory": "./out"
-  }
+    "directory": "./out",
+  },
+  "vars": {
+    "SKIP_DEPENDENCY_INSTALL": "true",
+  },
 }
