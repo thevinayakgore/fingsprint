@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "./ui/button";
 import Link from "next/link";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { Button } from "./ui/button";
 import { FaXTwitter } from "react-icons/fa6";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="flex flex-col md:flex-row items-center justify-between gap-10 px-5 py-4 border-t bg-primary text-primary-foreground w-full">
       <span className="text-sm font-medium">
@@ -56,6 +56,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

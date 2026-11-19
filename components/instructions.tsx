@@ -1,9 +1,8 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
-const InstructionsCard = () => {
+export default function Instructions () {
   return (
-    <>
       <Card className="w-full">
         <CardHeader>
           <CardTitle>How it Works</CardTitle>
@@ -36,8 +35,5 @@ const InstructionsCard = () => {
           </ul>
         </CardContent>
       </Card>
-    </>
   );
 };
-
-export default InstructionsCard;

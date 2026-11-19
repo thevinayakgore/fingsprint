@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fingsprint.vercel.app"),
+  metadataBase: new URL("https://fingsprint.pages.dev"),
   title: {
     default: "FingSprint — Test and Improve Your Typing Speed",
     template: "%s | FingSprint",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://fingsprint.vercel.app",
+    url: "https://fingsprint.pages.dev",
     siteName: "FingSprint",
     title: "FingSprint — Test and Improve Your Typing Speed",
     description:

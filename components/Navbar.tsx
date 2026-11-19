@@ -1,11 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { useTheme } from "next-themes";
 import { FiMoon, FiSun } from "react-icons/fi";
+import React, { useState, useEffect } from "react";
 
-const Navbar = () => {
+export default function Navbar() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -40,6 +40,4 @@ const Navbar = () => {
       </Button>
     </nav>
   );
-};
-
-export default Navbar;
+}

@@ -1,86 +1,95 @@
-# FingSprint
+<div align="left">
+<img src="./public/logo.png" width="40px" alt="FingSprint logo" align="left" />
 
-**FingSprint** is a lightweight, distraction-free typing speed test designed to measure your Words Per Minute (WPM), accuracy, and typing consistency directly in the browser.
+# FingSprint
+</div>
+
+**FingSprint** is a lightweight, browser-based typing speed test. It helps you measure your typing speed in **Words Per Minute (WPM)**, check your **accuracy**, and track your typing progress over time.
+
+The project focuses on a simple and distraction-free typing experience: open the app, start typing, and see your results update in real time.
 
 ## Features
 
-- **Real-Time WPM & Accuracy Tracking**: Instant feedback on typing speed, errors, and live character accuracy via `StatsCard`.
-- **Target Benchmarks**: Compare your performance against standard typing benchmarks with `IdealWPMCard`.
-- **Local Test History**: Automatically saves your past typing sessions locally in the browser (`HistoryCard`) with zero backend or account required.
-- **Dark & Light Mode**: Seamless theme switching powered by `theme-provider`.
-- **100% Static & Edge-Ready**: Exported as static HTML/CSS/JS (`out/`) for instant global CDN delivery.
+- Real-time WPM, accuracy, and time tracking
+- Character-level feedback while typing
+- Restart option for a new typing test
+- Test history stored locally in your browser
+- Light and dark theme support
+- No account or sign-up required
 
-## Project Structure
+## Live Demo
 
-```text
-fingsprint/
-├── app/
-│   ├── globals.css          # Global styles and Tailwind setup
-│   ├── layout.tsx           # Root layout and theme provider
-│   └── page.tsx             # Main typing test arena
-├── components/
-│   ├── ui/                  # Reusable UI primitives
-│   ├── Hero.tsx             # Header and test prompt area
-│   ├── StatsCard.tsx        # Live WPM & accuracy metrics
-│   ├── IdealWPMCard.tsx     # Speed benchmark comparison
-│   ├── InstructionsCard.tsx # Quick typing test rules & tips
-│   ├── HistoryCard.tsx      # Local session history log
-│   ├── Navbar.tsx           # Top navigation bar
-│   └── Footer.tsx           # Footer credits
-├── lib/                     # Helper utilities & word lists
-├── public/                  # Static assets
-└── next.config.ts           # Static export configuration
+You can try FingSprint here :
 
-```
+**https://fingsprint.pages.dev**
 
-## Getting Started
+## Clone the Project
 
-### Prerequisites
+Clone this repository to your local machine :
 
-* Node.js 20+
-* npm, pnpm, or yarn
-
-### Installation & Local Development
-
-1. **Clone the repository:**
 ```bash
-git clone [https://github.com/your-username/fingsprint.git](https://github.com/your-username/fingsprint.git)
-cd fingsprint
-
+git clone https://github.com/thevinayakgore/fingsprint.git
 ```
 
+Move into the project folder :
 
-2. **Install dependencies:**
+```bash
+cd fingsprint
+```
+
+## Install Dependencies
+
+Install the required packages :
+
 ```bash
 npm install
-
 ```
 
+## Run the Project
 
-3. **Start the development server:**
+Start the development server :
+
 ```bash
 npm run dev
-
 ```
 
+Then open your browser and visit :
 
-Open `http://localhost:3000` in your browser to start typing.
+```text
+http://localhost:3000
+```
 
-## Building & Deployment
+## How to Use
 
-FingSprint is configured for static export (`output: "export"` in `next.config.ts`), generating a standalone `out/` directory.
+1. Open FingSprint in your browser.
+2. Type the displayed text exactly as shown.
+3. Watch your WPM, accuracy, and time update in real time.
+4. Complete the text to finish the test.
+5. Click **Restart Test** to start again.
+6. Click **Show History** to view your previous test results.
+
+## Build for Production
+
+To create a production build :
 
 ```bash
-# Build static output
 npm run build
+```
 
-# Deploy directly to Cloudflare Pages production
-npx wrangler pages deploy out --project-name=fingsprint --branch=main
+To run the production build locally :
 
+```bash
+npm run start
 ```
 
 ## Tech Stack
 
-* **Framework**: Next.js (App Router + Static Export)
-* **Styling**: Tailwind CSS
-* **Language**: TypeScript
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+
+## License
+
+© 2026 FingSprint. All rights reserved.
